@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=40.8.0","wheel"]
+[tool.poetry]
+name = "my-script"
+version = "0.1.0"
+description = "A short description of your script"
+authors = ["Your Name <your@email.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
