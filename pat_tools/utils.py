@@ -37,19 +37,20 @@ class tier_enum(Enum):
     TIER_3 = (3, 'Minister of Joy','MoJ')
     def __init__(self,order:int,name:str,code:str) -> None:
         self._order=order
-        self._name=name
+        self._name_=name
         self.code =code
     @property
     def order(self):
         return self._order
-    @property
-    def name(self):
-        return self._name
     def __lt__(self,other):
         return self._order < other._order
     @classmethod
     def get(cls,name,default=None):
         try:
-            return cls[name]
-        except KeyError:
+            other_dict = {tier.name:tier for tier in cls}
+            if name not in other_dict:
+                return cls[name]
+            return other_dict[name]
+        except:
+            _log.error(traceback.format_exc())
             return default

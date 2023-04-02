@@ -3,8 +3,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "pat_tools"
-version = "0.1.0"
-description = "A short description of your script"
+version = "0.1.1"
+description = "simple utility functions for the patreon project"
 authors = ["Your Name <your@email.com>"]
 license = "MIT"
 packages = [
