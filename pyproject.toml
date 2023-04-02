@@ -1,14 +1,17 @@
 [build-system]
-requires = ["setuptools>=40.8.0","wheel"]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api
 [tool.poetry]
-name = "my-script"
+name = "pat_tools"
 version = "0.1.0"
 description = "A short description of your script"
 authors = ["Your Name <your@email.com>"]
 license = "MIT"
-
+packages = [
+{include="src/pat_tools", from="."}]
 [tool.poetry.dependencies]
-python = "^3.10"
-
+python = "^3.9"
+[tool.poetry.publishing]
+repository = "patreon_foxy"
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
