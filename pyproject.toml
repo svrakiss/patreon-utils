@@ -11,7 +11,3 @@ packages = [
 {include="src/pat_tools", from="."}]
 [tool.poetry.dependencies]
 python = "^3.9"
-[tool.poetry.publishing]
-repository = "patreon_foxy"
-[tool.poetry.dev-dependencies]
-pytest = "^6.2.4"
