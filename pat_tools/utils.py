@@ -32,9 +32,9 @@ def generate_highest_tier(self=None):
             return None
         return helper(self.tier)
 class tier_enum(Enum):
-    TIER_1 = (1, 'Supreme Kimochi Counsellor','SKC')
-    TIER_2 = (2,'Envoy of Lewdness','EoL')
-    TIER_3 = (3, 'Minister of Joy','MoJ')
+    TIER_1 = (1, 'Supreme Kimochi Counsellor','SKC',15)
+    TIER_2 = (2,'Envoy of Lewdness','EoL',6)
+    TIER_3 = (3, 'Minister of Joy','MoJ',9)
     def __init__(self,order:int,name:str,code:str,limit:int) -> None:
         self._order=order
         self._name_=name
