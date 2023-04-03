@@ -35,10 +35,11 @@ class tier_enum(Enum):
     TIER_1 = (1, 'Supreme Kimochi Counsellor','SKC')
     TIER_2 = (2,'Envoy of Lewdness','EoL')
     TIER_3 = (3, 'Minister of Joy','MoJ')
-    def __init__(self,order:int,name:str,code:str) -> None:
+    def __init__(self,order:int,name:str,code:str,limit:int) -> None:
         self._order=order
         self._name_=name
         self.code =code
+        self.limit =limit
     @property
     def order(self):
         return self._order
